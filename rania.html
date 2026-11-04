@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rania Business Company</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #1d2433;
+      background: #f5f7fb;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #101a33;
+      color: white;
+      padding: 18px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 24px;
+    }
+
+    nav a:hover {
+      color: #f4bd62;
+    }
+
+    .hero {
+      min-height: 75vh;
+      padding: 60px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 70px;
+      background: linear-gradient(135deg, #101a33, #263e6b);
+      color: white;
+    }
+
+    .logo {
+      width: 260px;
+      height: 260px;
+      border: 8px solid #f4bd62;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #f4bd62;
+      font-family: Georgia, serif;
+      font-size: 190px;
+      font-weight: bold;
+      line-height: 1;
+      box-shadow: 0 12px 40px #0005;
+      flex-shrink: 0;
+    }
+
+    .hero-copy {
+      max-width: 560px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #f4bd62;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #e0e6f2;
+      margin-bottom: 28px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #f4bd62;
+      color: #101a33;
+      padding: 13px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 70px 8%;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 14px;
+      color: #101a33;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+      margin-top: 35px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 12px;
+      box-shadow: 0 6px 22px #14244412;
+    }
+
+    .card h3 {
+      color: #253d68;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: #101a33;
+      color: #dce3f0;
+      padding: 24px 8%;
+      text-align: center;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav a {
+        margin: 0 8px;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 35px;
+      }
+
+      .logo {
+        width: 190px;
+        height: 190px;
+        font-size: 135px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">Rania Business Company</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="logo" aria-label="R logo">R</div>
+      <div class="hero-copy">
+        <h1>Welcome to <span>Rania Business Company</span></h1>
+        <p>
+          Helping businesses move forward with thoughtful strategy,
+          reliable service, and solutions built around your goals.
+        </p>
+        <a class="button" href="#contact">Let’s Work Together</a>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Our Company</h2>
+      <p>We partner with businesses to help them grow, improve, and succeed.</p>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="services">
+        <article class="card">
+          <h3>Business Consulting</h3>
+          <p>Practical guidance to help you plan and reach your business goals.</p>
+        </article>
+        <article class="card">
+          <h3>Growth Strategy</h3>
+          <p>Clear strategies to build stronger customer relationships and growth.</p>
+        </article>
+        <article class="card">
+          <h3>Project Support</h3>
+          <p>Dependable support to help your projects stay organized and on track.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: gretta@raniabusiness.com</p>
+      <p>Phone: (+250) 792-300 311)</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2026 Rania Business Company. All rights reserved.
+  </footer>
+
+</body>
+</html>
