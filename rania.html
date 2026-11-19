@@ -1,223 +1,848 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rania Business Company</title>
+</a>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Practical guidance, tools, and AI-powered support for starting and growing your business."
+  />
+  <title>Rania Business Company Ltd | Start Smart. Grow with Confidence.</title>
+
   <style>
+    :root {
+      --navy: #142d2b;
+      --green: #1e5147;
+      --gold: #d8a84e;
+      --cream: #faf8f2;
+      --white: #ffffff;
+      --text: #243332;
+      --muted: #64716d;
+      --border: #e7e8e2;
+      --shadow: 0 16px 40px rgba(20, 45, 43, 0.09);
+    }
+
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      font-family: Arial, sans-serif;
-      color: #1d2433;
-      background: #f5f7fb;
+      margin: 0;
+      color: var(--text);
+      background: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
     }
 
-    header {
-      background: #101a33;
-      color: white;
-      padding: 18px 8%;
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      min-height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 24px;
     }
 
     .brand {
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 24px;
-    }
-
-    nav a:hover {
-      color: #f4bd62;
-    }
-
-    .hero {
-      min-height: 75vh;
-      padding: 60px 8%;
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 70px;
-      background: linear-gradient(135deg, #101a33, #263e6b);
-      color: white;
+      gap: 11px;
+      color: var(--navy);
+      font-weight: 700;
+      line-height: 1.15;
     }
 
-    .logo {
-      width: 260px;
-      height: 260px;
-      border: 8px solid #f4bd62;
-      border-radius: 50%;
+    .brand-mark {
       display: grid;
       place-items: center;
-      color: #f4bd62;
+      width: 42px;
+      height: 42px;
+      color: var(--navy);
+      background: #f4ead5;
+      border: 1px solid #ead8b1;
+      border-radius: 12px;
       font-family: Georgia, serif;
-      font-size: 190px;
-      font-weight: bold;
-      line-height: 1;
-      box-shadow: 0 12px 40px #0005;
-      flex-shrink: 0;
+      font-size: 25px;
     }
 
-    .hero-copy {
-      max-width: 560px;
+    .brand small {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
     }
 
-    .hero h1 {
-      font-size: clamp(2.5rem, 5vw, 4.5rem);
-      line-height: 1.1;
-      margin-bottom: 20px;
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      color: #44524e;
+      font-size: 14px;
     }
 
-    .hero h1 span {
-      color: #f4bd62;
-    }
-
-    .hero p {
-      font-size: 1.1rem;
-      color: #e0e6f2;
-      margin-bottom: 28px;
+    .nav-links a:hover,
+    .footer-links a:hover {
+      color: var(--green);
     }
 
     .button {
-      display: inline-block;
-      background: #f4bd62;
-      color: #101a33;
-      padding: 13px 24px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 20px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      background: var(--green);
+      color: var(--white);
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: var(--navy);
+    }
+
+    .button-secondary {
+      color: var(--green);
+      background: transparent;
+      border-color: #b9cbc4;
+    }
+
+    .button-secondary:hover {
+      color: var(--white);
+      background: var(--green);
+    }
+
+    .nav-cta {
+      min-height: 42px;
+      padding: 0 15px;
+      font-size: 13px;
+    }
+
+    .hero {
+      overflow: hidden;
+      padding: 94px 0 88px;
+      background:
+        radial-gradient(circle at 88% 24%, rgba(216, 168, 78, 0.16), transparent 25%),
+        linear-gradient(135deg, #f8f7f1, #eef4ef);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .eyebrow {
+      margin: 0 0 15px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 680px;
+      margin-bottom: 20px;
+      color: var(--navy);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(42px, 6vw, 68px);
+      line-height: 1.04;
+      letter-spacing: -0.04em;
+    }
+
+    .hero-copy {
+      max-width: 590px;
+      margin-bottom: 28px;
+      color: #53635e;
+      font-size: 18px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 23px;
+    }
+
+    .helper-text {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .hero-card {
+      position: relative;
+      padding: 28px;
+      background: var(--white);
+      border: 1px solid rgba(30, 81, 71, 0.12);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card::before {
+      position: absolute;
+      top: -12px;
+      right: 28px;
+      width: 62px;
+      height: 62px;
+      border: 8px solid #f2e5c8;
+      border-radius: 50%;
+      content: "";
+    }
+
+    .card-label {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .hero-card h2 {
+      margin: 10px 0 18px;
+      color: var(--navy);
+      font-family: Georgia, serif;
+      font-size: 27px;
+    }
+
+    .step {
+      display: flex;
+      gap: 13px;
+      padding: 14px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .step-number {
+      flex: 0 0 30px;
+      display: grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      color: var(--green);
+      background: #edf4ef;
+      border-radius: 50%;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .step strong {
+      display: block;
+      color: var(--navy);
+      font-size: 14px;
+    }
+
+    .step span:last-child {
+      color: var(--muted);
+      font-size: 13px;
     }
 
     section {
-      padding: 70px 8%;
+      padding: 82px 0;
+    }
+
+    .section-heading {
+      max-width: 680px;
+      margin: 0 auto 40px;
       text-align: center;
     }
 
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 14px;
-      color: #101a33;
+    .section-heading h2 {
+      margin-bottom: 12px;
+      color: var(--navy);
+      font-family: Georgia, serif;
+      font-size: clamp(32px, 4vw, 45px);
+      line-height: 1.15;
     }
 
-    .services {
+    .section-heading p {
+      margin-bottom: 0;
+      color: var(--muted);
+    }
+
+    .journey-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 22px;
-      margin-top: 35px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
     }
 
-    .card {
-      background: white;
-      padding: 28px;
+    .journey-card {
+      display: flex;
+      min-height: 245px;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 26px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--white);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .journey-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .icon {
+      display: grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      margin-bottom: 18px;
       border-radius: 12px;
-      box-shadow: 0 6px 22px #14244412;
+      background: #edf4ef;
+      font-size: 22px;
     }
 
-    .card h3 {
-      color: #253d68;
+    .journey-card h3 {
+      margin-bottom: 9px;
+      color: var(--navy);
+      font-size: 20px;
+    }
+
+    .journey-card p {
+      margin-bottom: 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .text-link {
+      margin-top: auto;
+      color: var(--green);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .assistant-section {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .assistant-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .assistant-section .eyebrow {
+      color: #e6bd6a;
+    }
+
+    .assistant-section h2 {
+      margin-bottom: 16px;
+      font-family: Georgia, serif;
+      font-size: clamp(32px, 4vw, 45px);
+      line-height: 1.15;
+    }
+
+    .assistant-section p {
+      color: #d2dfda;
+    }
+
+    .assistant-list {
+      padding-left: 20px;
+      color: #e8efec;
+    }
+
+    .assistant-list li {
+      padding: 4px 0;
+    }
+
+    .assistant-demo {
+      padding: 24px;
+      color: var(--text);
+      background: var(--white);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+
+    .chat-heading {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .chat-avatar {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      color: var(--white);
+      background: var(--green);
+      border-radius: 50%;
+      font-weight: 700;
+    }
+
+    .chat-heading strong {
+      display: block;
+      color: var(--navy);
+    }
+
+    .chat-heading small {
+      color: var(--muted);
+    }
+
+    .chat-message {
+      max-width: 90%;
+      margin: 18px 0;
+      padding: 14px;
+      color: #42504c;
+      background: #f2f5f1;
+      border-radius: 4px 14px 14px 14px;
+      font-size: 14px;
+    }
+
+    .chat-input {
+      display: flex;
+      gap: 8px;
+    }
+
+    .chat-input input {
+      width: 100%;
+      min-width: 0;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 7px;
+      font: inherit;
+    }
+
+    .chat-input button {
+      padding: 0 15px;
+      border: 0;
+      border-radius: 7px;
+      color: var(--white);
+      background: var(--green);
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .disclaimer {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .features {
+      background: var(--cream);
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .feature {
+      padding: 10px;
+    }
+
+    .feature h3 {
+      margin-bottom: 8px;
+      color: var(--navy);
+      font-size: 17px;
+    }
+
+    .feature p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .closing {
+      padding: 76px 0;
+      text-align: center;
+      background: #f3eee2;
+    }
+
+    .closing h2 {
       margin-bottom: 10px;
+      color: var(--navy);
+      font-family: Georgia, serif;
+      font-size: clamp(32px, 4vw, 44px);
+    }
+
+    .closing p {
+      margin-bottom: 22px;
+      color: var(--muted);
     }
 
     footer {
-      background: #101a33;
-      color: #dce3f0;
-      padding: 24px 8%;
-      text-align: center;
+      padding: 28px 0;
+      color: #dce7e2;
+      background: #102320;
     }
 
-    @media (max-width: 700px) {
-      header {
-        flex-direction: column;
-        gap: 12px;
+    .footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 13px;
+    }
+
+    .copyright {
+      margin: 12px 0 0;
+      color: #aebdb7;
+      font-size: 12px;
+    }
+
+    @media (max-width: 850px) {
+      .nav-links {
+        gap: 13px;
+        font-size: 12px;
       }
 
-      nav a {
-        margin: 0 8px;
+      .hero-grid,
+      .assistant-grid {
+        grid-template-columns: 1fr;
       }
 
       .hero {
-        flex-direction: column;
-        text-align: center;
-        gap: 35px;
+        padding: 72px 0;
       }
 
-      .logo {
-        width: 190px;
-        height: 190px;
-        font-size: 135px;
+      .hero-card {
+        max-width: 560px;
+      }
+
+      .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 620px) {
+      .nav {
+        min-height: 68px;
+      }
+
+      .nav-links a:not(.nav-cta) {
+        display: none;
+      }
+
+      .brand {
+        font-size: 13px;
+      }
+
+      .nav-cta {
+        padding: 0 11px;
+        font-size: 12px;
+      }
+
+      .journey-grid,
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 62px 0;
+      }
+
+      .footer-row {
+        align-items: flex-start;
+        flex-direction: column;
       }
     }
   </style>
 </head>
-<body>
 
-  <header>
-    <div class="brand">Rania Business Company</div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="Rania Business Company Ltd home">
+        <span class="brand-mark" aria-hidden="true">R</span>
+        <span>
+          Rania Business
+          <small>Company Ltd</small>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="start.html">Start a Business</a>
+        <a href="grow.html">Grow Your Business</a>
+        <a href="resources.html">Resources</a>
+        <a href="about.html">About</a>
+        <a href="support.html">Our Support</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="home.html">home</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+<img src="ranialogo.png" alt="Your website name">
+  </header><header class="site-header">
+  <a class="brand" href="index.html">
+     </a>
+
+  <img src="photo.jpg" align ="right"
+    alt="Our customer-care representative helping a customer">
+</header>
 
   <main>
     <section class="hero" id="home">
-      <div class="logo" aria-label="R logo">R</div>
-      <div class="hero-copy">
-        <h1>Welcome to <span>Rania Business Company</span></h1>
-        <p>
-          Helping businesses move forward with thoughtful strategy,
-          reliable service, and solutions built around your goals.
-        </p>
-        <a class="button" href="#contact">Let’s Work Together</a>
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Business guidance for every stage</p>
+          <h1>Start smart. Grow with confidence.</h1>
+          <p class="hero-copy">
+            Practical guidance for starting, running, and growing your business.
+            Get clear next steps, useful tools, and support tailored to your goals.
+          </p>
+
+          <div class="button-row">
+            <a class="button" href="#start">Get My Business Roadmap</a>
+            <a class="button button-secondary" href="#assistant">Chat with the AI Assistant</a>
+          </div>
+
+          <p class="helper-text">
+            Not sure where to begin? Tell us what you’re building, and we’ll help
+            you map out your next steps.
+          </p>
+        </div>
+
+        <aside class="hero-card" aria-label="Business roadmap preview">
+          <span class="card-label">Your business roadmap</span>
+          <h2>Make your next move a clear one.</h2>
+
+          <div class="step">
+            <span class="step-number">1</span>
+            <span><strong>Clarify your idea</strong><span>Understand the problem you solve.</span></span>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <span><strong>Know your customers</strong><span>Explore who needs your product or service.</span></span>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <span><strong>Plan your next steps</strong><span>Build a practical path forward.</span></span>
+          </div>
+        </aside>
       </div>
     </section>
 
-    <section id="about">
-      <h2>About Our Company</h2>
-      <p>We partner with businesses to help them grow, improve, and succeed.</p>
-    </section>
+    <section id="start">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Find your starting point</p>
+          <h2>What would you like help with?</h2>
+          <p>Choose the stage that best describes where you are today.</p>
+        </div>
 
-    <section id="services">
-      <h2>Our Services</h2>
-      <div class="services">
-        <article class="card">
-          <h3>Business Consulting</h3>
-          <p>Practical guidance to help you plan and reach your business goals.</p>
-        </article>
-        <article class="card">
-          <h3>Growth Strategy</h3>
-          <p>Clear strategies to build stronger customer relationships and growth.</p>
-        </article>
-        <article class="card">
-          <h3>Project Support</h3>
-          <p>Dependable support to help your projects stay organized and on track.</p>
-        </article>
+        <div class="journey-grid">
+          <article class="journey-card">
+            <span class="icon" aria-hidden="true">💡</span>
+            <h3>I have a business idea</h3>
+            <p>Explore your customers, test demand, and shape your idea into a practical plan.</p>
+            <a class="text-link" href="#resources">Explore startup steps →</a>
+          </article>
+
+          <article class="journey-card">
+            <span class="icon" aria-hidden="true">🚀</span>
+            <h3>I’m starting a business</h3>
+            <p>Work through key launch decisions, from budgeting to marketing and operations.</p>
+            <a class="text-link" href="#resources">Plan my launch →</a>
+          </article>
+
+          <article class="journey-card" id="grow">
+            <span class="icon" aria-hidden="true">📈</span>
+            <h3>I want to grow my business</h3>
+            <p>Explore customer reach, cash-flow basics, and ways to prepare for sustainable growth.</p>
+            <a class="text-link" href="#resources">Explore growth guidance →</a>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>Email: gretta@raniabusiness.com</p>
-      <p>Phone: (+250) 792-300 311)</p>
+    <section class="assistant-section" id="assistant">
+      <div class="container assistant-grid">
+        <div>
+          <p class="eyebrow">Meet your AI Business Assistant</p>
+          <h2>A clearer answer to your next business question.</h2>
+          <p>
+            Ask about your business goals and challenges. The assistant can help
+            you create checklists, compare options, draft plans, and identify
+            questions worth exploring with a qualified professional.
+          </p>
+          <ul class="assistant-list">
+            <li>Personalized action plans and checklists</li>
+            <li>Business-plan and marketing-plan drafts</li>
+            <li>Questions to help you plan and manage risk</li>
+          </ul>
+          <a class="button" href="#chat">Ask a question</a>
+        </div>
+
+        <div class="assistant-demo" id="chat">
+          <div class="chat-heading">
+            <span class="chat-avatar" aria-hidden="true">R</span>
+            <span>
+              <strong>Rania Business Assistant</strong>
+              <small>Here to help you plan your next step</small>
+            </span>
+          </div>
+
+          <div class="chat-message" id="chat-response">
+            Hello! What kind of business are you building, and what would you
+            like help with today?
+          </div>
+
+          <form class="chat-input" id="chat-form">
+            <input
+              id="chat-question"
+              type="text"
+              placeholder="Type your business question..."
+              aria-label="Your business question"
+              required
+            />
+            <button type="submit">Send</button>
+          </form>
+
+          <p class="disclaimer">
+            This is a website demo, not a connected AI service. AI guidance is
+            informational and may need to be checked against local laws and
+            professional advice.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="resources">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Useful support, made practical</p>
+          <h2>Tools to help you move forward.</h2>
+          <p>Build confidence with clear information and resources you can put to work.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature">
+            <span class="icon" aria-hidden="true">🧭</span>
+            <h3>Step-by-step guidance</h3>
+            <p>Explore common business decisions with clear, practical guidance.</p>
+          </article>
+          <article class="feature">
+            <span class="icon" aria-hidden="true">📝</span>
+            <h3>Tools and templates</h3>
+            <p>Turn ideas into action with useful planning tools and checklists.</p>
+          </article>
+          <article class="feature">
+            <span class="icon" aria-hidden="true">🛡️</span>
+            <h3>Growth and risk resources</h3>
+            <p>Plan ahead and learn about common challenges businesses face.</p>
+          </article>
+          <article class="feature">
+            <span class="icon" aria-hidden="true">🤝</span>
+            <h3>Personalized support</h3>
+            <p>Find resources suited to your business stage and goals.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" id="about">
+      <div class="container">
+        <p class="eyebrow">Rania Business Company Ltd</p>
+        <h2>Your next step starts here.</h2>
+        <p>Tell us where you are in your business journey. We’ll help you find a useful place to begin.</p>
+        <a class="button" href="#assistant">Create My Business Roadmap</a>
+      </div>
     </section>
   </main>
 
   <footer>
-    &copy; 2026 Rania Business Company. All rights reserved.
+    <div class="container">
+      <div class="footer-row">
+        <a class="brand" href="#home" style="color: white;">
+          <span class="brand-mark" aria-hidden="true">R</span>
+          <span>
+            Rania Business
+            <small style="color: #aebdb7;">Company Ltd</small>
+          </span>
+        </a>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="#about">About</a>
+          <a href="mailto:umurerwarania7@gmail.com">Contact</a>
+          <a href="#resources">Resources</a>
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#terms">Terms</a>
+        </nav>
+      </div>
+
+      <p class="copyright">
+        © <span id="year"></span> Rania Business Company Ltd. All rights reserved.
+      </p>
+    </div>
   </footer>
 
+  <script>
+    // Demo interaction only; connect a secure backend to add a real AI assistant.
+    const chatForm = document.getElementById("chat-form");
+    const chatQuestion = document.getElementById("chat-question");
+    const chatResponse = document.getElementById("chat-response");
+
+    chatForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const question = chatQuestion.value.trim();
+      if (!question) return;
+
+      chatResponse.textContent =
+        "Thanks for your question: “" + question +
+        "” A connected version of the Rania Business Assistant could provide tailored guidance here. For now, add your AI service through a secure backend.";
+
+      chatQuestion.value = "";
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
